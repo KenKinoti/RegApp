@@ -99,6 +99,9 @@ public class Home extends AppCompatActivity
             intent.setAction(Intent.ACTION_GET_CONTENT);
             startActivityForResult(Intent.createChooser(intent,
                     "Select Picture"), SELECT_PICTURE);
+
+        } else if (id == R.id.nav_maps) {
+//       Maps call
         } else if (id == R.id.nav_manage) {
 //              Settings config
         } else if (id == R.id.nav_share) {
