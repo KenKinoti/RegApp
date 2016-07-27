@@ -13,6 +13,7 @@ import android.widget.Spinner;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HttpRequestHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,14 +34,14 @@ public class Register extends AppCompatActivity {
 
         edtFirstName = (EditText) findViewById(R.id.edt_first_name);
         edtEmail = (EditText) findViewById(R.id.edt_email);
-        edtPassword = (EditText) findViewById(R.id.edit_password);
+        edtPassword = (EditText) findViewById(R.id.edt_password);
         rbMale = (RadioButton) findViewById(R.id.rd_male);
         rbFemale = (RadioButton) findViewById(R.id.rd_female);
         spCountry = (Spinner) findViewById(R.id.sp_country);
         regButton = (Button) findViewById(R.id.bt_submit);
 
         String[] countries = {"KE", "TZ", "UG", "RW"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(Register.this, android.R.layout.simple_spinner_item, countries);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(Register.this, android.R.layout.simple_spinner_item, countries);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spCountry.setAdapter(adapter);

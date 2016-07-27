@@ -10,19 +10,39 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="edu.strathmore.regapp.Home"
-    tools:showIn="@layout/activity_events_list">
+    tools:context="edu.strathmore.regapp.Events"
+    tools:showIn="@layout/activity_events">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textStyle="bold"
+        android:text="@string/title"
         />
 
-    <ListView
-        android:id="@+id/events_list"
+    <EditText
+        android:id="@+id/edt_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note"
+        />
+
+
+    <EditText
+        android:id="@+id/edt_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        />
 
 </LinearLayout>

@@ -88,6 +88,9 @@ public class Home extends AppCompatActivity
         if (id == R.id.nav_create_event) {
             // Handle the camera action
 //            Create an event
+            Toast.makeText(getApplicationContext(), "Creating new Event", Toast.LENGTH_SHORT).show();
+            Intent eventIntent = new Intent(Home.this, Events.class);
+            startActivity(eventIntent);
         } else if (id == R.id.nav_camera) {
 //            Open the camera
             Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
@@ -102,6 +105,9 @@ public class Home extends AppCompatActivity
 
         } else if (id == R.id.nav_maps) {
 //       Maps call
+            Toast.makeText(getApplicationContext(), "Maps", Toast.LENGTH_SHORT).show();
+            Intent locationIntent = new Intent(Home.this, Location.class);
+            startActivity(locationIntent);
         } else if (id == R.id.nav_manage) {
 //              Settings config
         } else if (id == R.id.nav_share) {

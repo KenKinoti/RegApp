@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -49,7 +51,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.strathmore.regapp.Home" />
         </activity>
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".Events" />
+        <activity android:name=".DBHelper" />
+        <activity android:name=".EventsList"></activity>
     </application>
 
 </manifest>
